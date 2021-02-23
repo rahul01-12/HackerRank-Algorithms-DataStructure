@@ -1,0 +1,21 @@
+ static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+       if (position < 1)
+            System.out.print("Invalid position");
+        if (position == 1) {
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+            newNode.next = head;
+            head = newNode;
+        } else {
+         SinglyLinkedListNode newNode =new SinglyLinkedListNode(data);
+         SinglyLinkedListNode t,t1;
+         t=head;
+         for(int i=0;i<position-1;i++){
+             t=t.next;
+         }
+         t1=t.next;
+         newNode.next=t1;
+         t.next=newNode;
+        }
+        return head;
+    }
+    
