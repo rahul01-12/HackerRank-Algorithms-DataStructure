@@ -1,1 +1,3 @@
 praticing github
+
+updated practice.txt file
